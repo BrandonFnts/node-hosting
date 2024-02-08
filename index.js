@@ -6,6 +6,7 @@ const bodyParse = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
@@ -65,6 +66,6 @@ app.get('/enviar-correo', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Servidor Express en ejecución en el puerto 3000');
+app.listen(PORT, () => {
+  console.log(`Servidor Express en ejecución en el puerto ${PORT}`);
 });
