@@ -6,10 +6,9 @@ const bodyParse = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
-app.use(cors());
-
 const app = express();
 
+app.use(cors());
 app.use(express.static('views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
