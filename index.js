@@ -63,7 +63,7 @@ const transporter = nodemailer.createTransport({
 app.get('/enviar-correo', (req, res) => {
   const mailOptions = {
       from: email,
-      to: email,
+      to: destinatario,
       subject: 'Hola desde Express.js',
       text: 'Probando sistema de correo con Espress.js y nodemailer',
   };
