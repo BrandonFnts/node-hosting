@@ -48,7 +48,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/welcome', (req, res) => {
-  res.status(200).send({msg: 'Hola mundo'}); 
+  const { username } = req.body;
+  res.status(200).send({msg: `Hola, ${username}`}); 
 });
 
 const transporter = nodemailer.createTransport({
